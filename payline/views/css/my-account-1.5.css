@@ -1,0 +1,20 @@
+div.cards {border: 1px solid #d0d3d8;background: #D0D1D5 repeat-x top left;	padding: 0.6em;	position: relative;	width: 544px}
+div.cards h3 { margin: 0 }
+div.cards p.checkbox input {margin-top: 0!important;margin-top: -3px}
+div.cards ul.item { clear: both }
+ul.card {background-color: white;	float: left;	list-style-image: none;	list-style-position: outside;	list-style-type: none;	margin-left: 0.25em;	padding-bottom: 0.6em;	margin-bottom: 1em;position: relative;	width: 268px}
+ul.card li {padding-left: 1.4em;margin-top: 0.6em}
+li.card_title {	margin-top: 0!important;	background-color: #e0e1e5;	color: #333;	font-weight: bold;	height: 27px;	font-size: 1.2em;	line-height: 1.9em}
+li.card_type b, li.card_update a, li.card_delete a { color: #dd2a81 }
+
+span.card_name,span.card_firstname,span.card_lastname,span.card_update a,span.card_delete a { color: #dd2a81 }
+span.card_name,span.card_firstname,span.card_lastname,span.card_company { font-weight: bold }
+
+p.submit {display:inline;}
+#createMyWallet {float:left;}
+#deleteMyWallet {float:right;}
+
+#createMyWallet,
+#deleteMyWallet {margin-top:10px;}
+#center_column .card_add { padding: 1em 0 }
+

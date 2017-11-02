@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>payline</name>
+	<displayName><![CDATA[Payline]]></displayName>
+	<version><![CDATA[PS-1.6.4]]></version>
+	<description><![CDATA[Avec la solution de paiement en ligne s&eacute;curis&eacute;e Payline, recrutez et fid&eacute;lisez vos cyber-consommateurs : plus de ventes, moins de fraudes, sur tous les canaux, partout !!!!]]></description>
+	<author><![CDATA[Monext]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Etes-vous sur de vouloir supprimer le module ? Attention les données de configuration et les données liées au module seront perdues.]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

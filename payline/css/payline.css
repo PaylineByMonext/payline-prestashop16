@@ -1,0 +1,60 @@
+/* payline */
+.error {background-color: #FAE2E3;	border: 1px solid #EC9B9B;	color: #383838;	font-weight: 700;	line-height: 20px;	margin: 0px 0px 10px;	padding: 10px 15px;}
+.success{background-color: #DFFAD3;	border: 1px solid #72CB67;	color: #383838;	font-weight: 700;	line-height: 20px;	margin: 0px 0px 10px;	padding: 10px 15px;}
+
+.paylineSpecificBlock {display:block;border: none;padding-bottom: 0; border: 2px solid #d4d5d3; background-color: #fff; padding: 10px }
+.paylineSpecificBlock .title {font-size: 1.5em; font-weight: bold; padding-left: 10px; padding-top: 10px ; padding-bottom: 10px}
+.paylineSpecificBlock .subtitle {font-size: 1.1em; font-weight: bold; padding-left: 10px; padding-top: 10px ; padding-bottom: 10px}
+.paylineSpecificBlock .description {padding-left: 10px; padding-top: 10px ; padding-bottom: 10px}
+
+.payline_payment {height: 64px; line-height: 48px; cursor:pointer; padding-top: 0px; padding-bottom: 0px}
+.payline_payment IMG.logo {vertical-align: middle; padding-left: 0}
+.payline_payment IMG.right {float: right}
+.payline_payment:HOVER {background-color:#eee }
+
+#recurringTitle{padding:0.6em;}
+#recurringCard{float:left;padding:0.6em;}
+.recurringLink{display:inline;border:none;text-decoration:none;}
+#recurringLogo{float:right;margin-right: 1.6em;margin-top:-3em;}
+
+div.paylineSpecificBlock img{margin-right: 1em;vertical-align: middle;padding-top:0.6em;padding-left:0.6em;}
+div.cardsWallet label{display:block;font-weight:bold;padding-top:10px;}
+
+#directPaymentPayline .invalid {background-color:#f6b2b0;}
+#suspendSubscribe, #terminatedSubscribe {text-align:left;}
+#suspendSubscribe p, #terminatedSubscribe p {padding-bottom: 20px;}
+#suspendSubscribe p input, #terminatedSubscribe p input{display:inline-block;}
+
+
+#order #center_column .paiement_block .paylineHolder .paylineSpecificBlock p.center {
+	text-align: center;
+}
+
+
+.payline-form {
+	width: 300px;
+	margin: 0 auto;
+}
+.paylineHolder15 .payline-form {
+	margin: 0 0 0 10px;
+}
+
+
+
+.paylineHolder15 .cardsWallet {	border: 1px solid #D0D1D5; padding: 0.4em;}
+.paylineHolder15 .cardsWallet:HOVER {	background:  #eee}
+
+.paylineHolder15 ul.cardWallet {
+	background-color: white;
+	float: left;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-left: 0.3em;
+	padding-bottom: 0.6em;
+	margin-bottom: 1em;
+	width: 230px;
+}
+.paylineHolder15 ul.cardWallet li { margin-top: 0.6em; }
+.paylineHolder15 div.cardsWallet input,
+.paylineHolder15 div.cardsWallet select{ margin:0; }

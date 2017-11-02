@@ -1,0 +1,29 @@
+#center_column p {
+	margin: 0 0 13px;
+}
+#center_column p.p-indent {
+	margin: 0 0 27px;
+}
+
+.card h3.page-subheading {
+	margin: 0 0 15px 0;
+}
+
+.card li .card_key {
+	font-weight: bold;
+}
+
+.card li.card_update {
+	margin: 14px 0 6px 0;
+}
+.card li.card_update a {
+	margin: 0 10px 0 0;
+}
+
+.button.button-medium.deletewallet {
+    background-image: -moz-linear-gradient(center top, #df0016 0%, #bf0015 100%);
+    border-color: #dc0000 #d90404 #c72626;
+}
+.button.button-medium.deletewallet span {
+	border: 1px solid #d77575;
+}

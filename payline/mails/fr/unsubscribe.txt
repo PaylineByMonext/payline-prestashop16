@@ -1,0 +1,12 @@
+Bonjour,
+
+Résiliation de l'abonnement n°{paymentRecordId}
+
+Le client a résilié son abonnement pour la raison suivante :
+{message}
+
+{shop_name} - {shop_url}
+
+
+
+{shop_url} réalisé par PrestaShop™

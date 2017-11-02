@@ -1,0 +1,75 @@
+div.payline-toggle { width: 60px; margin: 0 auto 20px auto; }
+div.margin-form div.payline-toggle { margin: 0; }
+
+/* Step 1 */
+div.configuration-generale { float: left; width: 47%; padding-right: 2%; border-right: 2px solid #ccc; }
+div.configuration-proxy { float: left; width: 47%; margin-left: 2%; }
+input.submitPayline { background: #e53138 !important; color: white !important; font-weight: bold !important; text-shadow: none !important;}
+
+.paylineHeaderBlock { background: #f8f8f8; border: 1px solid #cccccc; padding: 8px; height: 300px; }
+.paylineHeaderBlock a, a.colored-payline-link { color: #e53138; font-weight: bold; }
+a#paylineCreateAccountButton { margin: 20px auto; width: 210px; background: #e53138; color: white; font-weight: bold; text-align: center; display: block; padding: 10px; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; text-decoration: none }
+a#paylineCreateAccountButton span { font-size: 1.3em; }
+.paylineHiddenBlock { display: none !important; }
+
+.payline-pane .tab-page { background: #f8f8f8; }
+.payline-pane h4.tab { background: #f8f8f8; width: auto !important; padding: 2px 25px 4px; }
+.payline-pane h4.tab.selected { background: #e53138; color:white; }
+.payline-pane h4.tab.selected a { color:white; text-decoration: none; }
+
+div#paylinePresentationBlock { float: left; width: 60%; }
+div#paylinePresentationBlock p { margin: 1.4em 0;  }
+div#paylineOpenAccountBlock { float: right; width: 37%; text-align: center; }
+
+div.toggle-payline-production { margin: 0 !important; }
+
+/* Step 2 */
+div.payline-available-contracts-container input.submitAddNewContract { text-shadow: none; background: darkseagreen; font-weight: bold; }
+div.payline-available-contracts-container input.submitAddNewContract[disabled="disabled"]:hover { background: darkseagreen; }
+div.payline-available-contracts-container input.submitAddNewAlternateContract { text-shadow: none; background: wheat; font-weight: bold; }
+div.payline-available-contracts-container input.submitAddNewAlternateContract[disabled="disabled"]:hover { background: wheat; }
+
+div.payline-available-contracts-container { min-height: 300px; float: left; width: 48%; margin-right: 2% }
+div.payline-available-contracts-list ul { list-style: none; }
+div.payline-available-contracts-list ul li { float: left; padding: 10px; cursor: pointer; margin: 2px 7px; }
+div.payline-available-contracts-list ul li img { opacity: 0.5; }
+div.payline-available-contracts-list ul li.payline-selected-contract { -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; border: 2px solid #e53138; margin: 0 5px; }
+div.payline-available-contracts-list ul li.payline-selected-contract img { opacity: 1; }
+div.payline-available-contracts-list .paylineRemoveContract { display: none; }
+div.payline-available-contracts-list .payline-contract-label { display: none; }
+
+div.payline-shop-contracts-container { min-height: 300px; float: left; width: 47%; padding-left: 2%; border-left: 2px solid #ccc; }
+div.payline-shop-contracts-container ol { list-style: decimal; }
+div.payline-shop-contracts-container ol li { padding: 10px; cursor: move; margin: 0px 5px; }
+div.payline-shop-contracts-container .paylineRemoveContract { display: block; float: right; text-shadow: none; background: #e53138; color: white; font-weight: bold; }
+div.payline-shop-contracts-container .payline-contract-label { display: inline; }
+
+/* Step 3 */
+div.payline-payment-container-left { float: left; width: 49%; }
+div.payline-payment-container-right { float: left; width: 49%; margin-left: 1%; }
+div.payline-payment-cfg-container { width: 98%; border: 2px solid #ccc; margin: 1% 0; padding: 1%; }
+div.payline-payment-cfg-container h3 { margin-top: 0; color: #e53138; }
+div.payline-payment-cfg-container p.payline-payment-baseline { font-size: 0.9em; font-style: italic; text-align: center; padding-top: 10px; padding-bottom: 10px; min-height: 40px; }
+div.payline-payment-cfg-fields { display: none; margin-top: 5px; padding-top: 10px; border-top: 2px solid #ccc; }
+div.payline-pane input.payline-cfg-button { background: url('../../../img/admin/prefs.gif') 4px center no-repeat !important; padding-left: 22px; }
+
+/* PS 1.6 */
+.pm_bo_ps_16 .center { text-align: center; }
+.pm_bo_ps_16 .toolbarBox { background: url('../img/paylineHeaderLogo.png') no-repeat 10px center #f8f8f8; border: 1px solid #cccccc; margin-bottom: 10px; padding: 10px 10px 10px 180px; }
+.pm_bo_ps_16 .toolbarBox h3 { font-size: 1.6em; font-weight: bold; line-height: 55px; margin: 0; padding: 0; }
+.pm_bo_ps_16 .language_flags { display: none; background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #555555; float: left; margin: 4px; padding: 8px; width: 80px;}
+.pm_bo_ps_16 .displayed_flag img { margin-left: 8px; margin-top: 4px; }
+.pm_bo_ps_16 .info { background: #bde5f8; border: 1px solid #00529b; border-radius: 3px; color: #00529b; margin-bottom: 15px; padding: 8px; }
+.pm_bo_ps_16 .conf { background: #DFFAD3; border: 1px solid #72CB67; border-radius: 3px; color: #383838; margin-bottom: 15px; padding: 8px; }
+.pm_bo_ps_16 .error { background: #FAE2E3; border: 1px solid #EC9B9B; border-radius: 3px; color: #383838; margin-bottom: 15px; padding: 8px; }
+
+.pm_bo_ps_16 .payline-payment-cfg-container .payline-payment-cfg-fields .margin-form { padding: 0 0 1em 350px; }
+.pm_bo_ps_16 .payline-payment-cfg-container .payline-payment-cfg-fields label { width: 330px; text-align: right !important; }
+.pm_bo_ps_16 .payline-payment-cfg-container .payline-payment-cfg-fields input[type=text] { width: 200px; }
+.pm_bo_ps_16 .payline-payment-cfg-container .payline-payment-cfg-fields select { width: 210px; }
+.pm_bo_ps_16 .payline-payment-cfg-container .multiselect-container select { width: 570px; }
+.pm_bo_ps_16 .payline-payment-cfg-container .multiselect-container .margin-form { width: 570px; clear:both; padding: 0 0 1em 1em !important; }
+.pm_bo_ps_16 .payline-payment-cfg-container .multiselect-container .margin-form:before,
+.pm_bo_ps_16 .payline-payment-cfg-container .multiselect-container .margin-form:after { content: ""; }
+.pm_bo_ps_16 .payline-payment-cfg-container .multiselect-container input.search { width: 50% !important; }
+
