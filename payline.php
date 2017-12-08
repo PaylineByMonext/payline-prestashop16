@@ -2183,7 +2183,7 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 								$fAmount,
 								$this->displayName,
 								$sResultShortMessage . ' - ' . $sResultLongMessage .'<br />',
-								'',
+								array(),
 								'','',$oCustomer->secure_key);
 
 
@@ -3977,7 +3977,7 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 		$doWebPaymentRequest['buyer']['firstName'] 	= $cust->firstname;
 		$doWebPaymentRequest['buyer']['email'] 		= $cust->email;
 		$doWebPaymentRequest['buyer']['customerId']	= $cust->email;
-		$doWebPaymentRequest['buyer']['walletId'] 	= $bActivateWalletPayment ? $this->getOrGenWalletId($cust->id) : '';		
+		$doWebPaymentRequest['buyer']['walletId'] 	= $bActivateWalletPayment ? $this->getOrGenWalletId($cust->id) : '';
 
 		// ADDRESSES
 		$AddressBill = $this->getAddress($invoiceAddress);
@@ -6132,7 +6132,7 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 					
 				}else if ($sResponseCode !== '02304' && $sResponseCode !== '02324' && $sResponseCode !== '02534') {
 
-					$this->validateOrder($nCartId, _PS_OS_ERROR_, $fAmount, $this->displayName, $sResponseShortMessage . ' - ' . $sResponseLongMessage . '<br />', '', '', '', $oCustomer->secure_key);
+					$this->validateOrder($nCartId, _PS_OS_ERROR_, $fAmount, $this->displayName, $sResponseShortMessage . ' - ' . $sResponseLongMessage . '<br />', array(), '', '', $oCustomer->secure_key);
 
 				} else {
 					$this->log('Unknown response code to handle => ' . $sResponseCode);
