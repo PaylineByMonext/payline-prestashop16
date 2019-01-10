@@ -2,7 +2,7 @@
         <module>
             <name>payline</name>
             <displayName><![CDATA[Payline]]></displayName>
-            <version><![CDATA[1.6.5]]></version>
+            <version><![CDATA[1.6.5.1]]></version>
             <description><![CDATA[Avec la solution de paiement en ligne s&eacute;curis&eacute;e Payline, recrutez et fid&eacute;lisez vos cyber-consommateurs : plus de ventes, moins de fraudes, sur tous les canaux, partout !!!!]]></description>
             <author><![CDATA[Monext]]></author>
             <tab><![CDATA[payments_gateways]]></tab>

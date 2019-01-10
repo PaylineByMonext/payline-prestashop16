@@ -282,7 +282,7 @@ class Payline extends PaymentModule {
 			'template'		=> 'payment',
 			'paid'			=> false
 		),
-		'_ID_ORDER_STATE_PENDING_PARTNER' => array(
+		'_ID_ORDER_STATE_PENDING' => array(
 			'lang' => array(
 				'en' => 'Pending partner',
 				'fr' => 'En attente du partenaire',

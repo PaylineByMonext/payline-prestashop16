@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `%%PREFIX%%payline_wallet`(
 
 CREATE TABLE IF NOT EXISTS `%%PREFIX%%payline_card` (
 	`type` VARCHAR(12) NOT NULL,
-	`contract` VARCHAR(12) NOT NULL,
+	`contract` VARCHAR(255) NOT NULL,
 	`label` VARCHAR(50) NOT NULL,
   `logo` VARCHAR(255) NOT NULL,
 	`primary` TINYINT(3) UNSIGNED NULL DEFAULT 0,
