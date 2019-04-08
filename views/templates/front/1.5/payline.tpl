@@ -182,19 +182,20 @@
 <script type="text/javascript">
 {literal}
 	$(document).ready(function(){
+                var submitPaymentForm = function(paymentRow){
+                    var cardType = $(paymentRow).data('cardType');
+                    var contract = $(paymentRow).attr('data-card-contract');
+                    var mode = $(paymentRow).data('mode');
+                    $('#contractNumber').val(contract);
+                    $('#mode').val(mode);
+                    $('#type').val(cardType);
+                    $("#WebPaymentPayline").submit();
+                };
 
-		$(".payline_payment").each(function(){
-
-			$(this).click(function(){
-				var cardType = $(this).data('cardType');
-				var contract = $(this).attr('data-card-contract');
-				var mode = $(this).data('mode');
-				$('#contractNumber').val(contract);
-				$('#mode').val(mode);
-				$('#type').val(cardType);
-				$("#WebPaymentPayline").submit();
-			});
-		});
+                $('.payline_payment').on('click', function(){ 
+                    $('.payline_payment').off('click');
+                    submitPaymentForm($(this));
+                });
 
 		$('#directPaymentPayline').bind('submit',function(){
 
