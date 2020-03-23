@@ -468,7 +468,7 @@ final class paylineLog {
 class paylineSDK{
 
 	// kit version
-	const KIT_VERSION	= 'PS-1.6.5.1';
+	const KIT_VERSION	= 'PS-1.6.5.2';
 	
 	// trace log
 	var $logger;

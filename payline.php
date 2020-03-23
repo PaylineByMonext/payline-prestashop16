@@ -363,6 +363,7 @@ class Payline extends PaymentModule {
 		)
 	);
 	
+        protected $sCurrentToken = null;
 
 # CLASS METHODS
 
@@ -1529,7 +1530,9 @@ class Payline extends PaymentModule {
 
 		$sToken = null;
     if (isset($aData['transactionId']) && !empty($aData['transactionId'])){
-
+                    if (!$this->lockToken($aData['transactionId'])) {
+                        return false;
+                    }
 			$aArgs = array(
 					'orderRef' 			=> '',
 					'startDate' 		=> '',
@@ -1544,7 +1547,9 @@ class Payline extends PaymentModule {
 			
 			
 		} else if  (isset($aData['token']) || !empty($aData['token'])) {
-
+                    if (!$this->lockToken($aData['token'])) {
+                        return false;
+                    }
 			$sToken = $aData['token'];
 
 			$aPaymentDetails = $this->getPaylineSDK()->getWebPaymentDetails(array('token'=> $sToken, 'version'=> self::API_VERSION));
@@ -1761,6 +1766,9 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 	 */
 	protected function validateSubscriptionViaPaymentRecord($sPaymentRecordId, $sTransactionId){
 
+		if (!$this->lockToken($sTransactionId)) {
+                    return false;
+                }
 		// Using principal contract
 		$sContractNumber = Configuration::get('PAYLINE_CONTRACT_NUMBER');
 
@@ -2048,6 +2056,9 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 	 * @return boolean True if succeeded
 	 */
 	protected function validateSubscriptionViaToken($sToken){
+                if (!$this->lockToken($sToken)) {
+                    return false;
+                }
 
 		$aLogData = array(
 				'token' 		  => $sToken,
@@ -6023,6 +6034,9 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 
 		// @ws_call
 		$token = isset($aData['token']) ? $aData['token'] : $aData['paylinetoken']; 
+                if (!$this->lockToken($token)) {
+                    return false;
+                }
 		$aResponse = $this->getPaylineSDK()->getWebPaymentDetails(array('token' => $token, 'version' => self::API_VERSION));
 		$this->log('getWebPaymentDetails response', $aResponse);
 
@@ -6384,4 +6398,33 @@ $this->log('aPaymentRecord', $aPaymentRecord);
 		$aResult = Db::getInstance()->ExecuteS($sQuery);
 		return $aResult[0]['type'];
 	} 
+        
+        protected function lockToken($token)
+        {
+            if (empty($token)) {
+                return true;
+            } else {
+                $this->sCurrentToken = $token;
+}
+
+            $tokenPath = dirname(__FILE__).'/tmp/'.$this->sCurrentToken;
+            if (file_exists($tokenPath)) {
+                $e = new Exception();
+                $this->log('lockToken already exists : '.$token.PHP_EOL.$e->__toString());
+                return false;
+            } else {
+                file_put_contents($tokenPath, '');
+            }
+
+            return true;
+        }
+        
+        public function __destruct() {
+            if (!empty($this->sCurrentToken)) {
+                $tokenPath = dirname(__FILE__).'/tmp/'.$this->sCurrentToken;
+                if (file_exists($tokenPath)) {
+                    @unlink($tokenPath);
+                }
+            }
+        }
 }
